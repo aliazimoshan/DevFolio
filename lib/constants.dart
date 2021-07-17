@@ -11,16 +11,14 @@ const kSocialIcons = [
   "https://img.icons8.com/android/480/ffffff/twitter.png",
   "https://img.icons8.com/metro/308/ffffff/linkedin.png",
   "https://img.icons8.com/material-rounded/384/ffffff/github.png",
-  "https://img.icons8.com/ios-filled/500/ffffff/medium-monogram--v1.png"
 ];
 
 const kSocialLinks = [
-  "https://facebook.com/mhmzdev",
-  "https://instagram.com/mhmzdev",
-  "https://twitter.com/mhmzdev",
-  "https://linkedin.com/in/mhmzdev",
-  "https://github.com/mhmzdev",
-  "https://mhamzadev.medium.com"
+  "https://www.facebook.com/a.azimoshan",
+  "https://www.instagram.com/ali__azim",
+  "https://twitter.com/AAzimoshan",
+  "https://www.linkedin.com/in/ali-azimoshan-b19694180",
+  "https://github.com/aliazimoshan",
 ];
 
 // URL Launcher
@@ -44,12 +42,12 @@ final kCommunityLinks = [
 final kTools = [
   "Flutter",
   "Dart",
-  "Python",
+  "Nodejs",
+  "Seo",
   "Java",
-  "C++",
   "HTML",
   "CSS",
-  "Bootstrap"
+  "Tailwinds"
 ];
 
 // services

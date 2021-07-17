@@ -48,7 +48,7 @@ class AboutTab extends StatelessWidget {
             height: height * 0.032,
           ),
           Text(
-            "I'm Muhammad Hamza, a Flutter developer, Technical blog writer and UI designer.",
+            "I'm Ali Azimoshan, a Flutter developer, Web designer and Seo expert.",
             style: GoogleFonts.montserrat(
               fontSize: height * 0.035,
               fontWeight: FontWeight.w400,
@@ -115,7 +115,7 @@ class AboutTab extends StatelessWidget {
                 children: [
                   AboutMeMetaData(
                     data: "Name",
-                    information: "Muhammad Hamza",
+                    information: "Ali Azimoshan",
                   ),
                   AboutMeMetaData(
                     data: "Age",
@@ -152,27 +152,25 @@ class AboutTab extends StatelessWidget {
                     btnText: "Resume",
                     onPressed: () {
                       kIsWeb
-                          ? html.window.open(
-                              'https://drive.google.com/uc?export=view&id=1OOdcdGEN3thVvpZ4cl_MM0LT-GCMuLIE',
-                              "pdf")
-                          : launchURL(
-                              'https://drive.google.com/uc?export=view&id=1OOdcdGEN3thVvpZ4cl_MM0LT-GCMuLIE');
+                          ? html.window
+                              .open('https://jobinja.ir/user/aliazim', "pdf")
+                          : launchURL('https://jobinja.ir/user/aliazim');
                     }),
               ),
-              Container(
-                width: width * 0.05,
-                decoration: BoxDecoration(
-                  border: Border(
-                    bottom: BorderSide(color: Colors.grey[900], width: 2.0),
-                  ),
-                ),
-              ),
-              for (int i = 0; i < kCommunityLogo.length; i++)
-                CommunityIconBtn(
-                  icon: kCommunityLogo[i],
-                  link: kCommunityLinks[i],
-                  height: _communityLogoHeight[i],
-                ),
+              // Container(
+              //   width: width * 0.05,
+              //   decoration: BoxDecoration(
+              //     border: Border(
+              //       bottom: BorderSide(color: Colors.grey[900], width: 2.0),
+              //     ),
+              //   ),
+              // ),
+              // for (int i = 0; i < kCommunityLogo.length; i++)
+              //   CommunityIconBtn(
+              //     icon: kCommunityLogo[i],
+              //     link: kCommunityLinks[i],
+              //     height: _communityLogoHeight[i],
+              //   ),
             ],
           )
         ],

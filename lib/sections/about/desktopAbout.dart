@@ -35,7 +35,7 @@ class AboutDesktop extends StatelessWidget {
             children: [
               Expanded(
                 child: Image.asset(
-                  'assets/web.png',
+                  'assets/web.jpeg',
                   height: height * 0.7,
                 ),
               ),
@@ -55,7 +55,7 @@ class AboutDesktop extends StatelessWidget {
                         height: height * 0.03,
                       ),
                       AdaptiveText(
-                        "I'm Muhammad Hamza, a Flutter developer, Technical blog writer and UI designer.",
+                        "I'm Ali Azimoshan, a Flutter developer, Web designer and Seo expert.",
                         style: GoogleFonts.montserrat(
                           fontSize: height * 0.035,
                           fontWeight: FontWeight.w400,
@@ -68,7 +68,7 @@ class AboutDesktop extends StatelessWidget {
                         height: height * 0.02,
                       ),
                       AdaptiveText(
-                        "I'm a Final Year Computer Science student enrolled in COMSATS University, Islamabad. I have been developing mobile apps for over 1.5 years now. I have worked in teams for various startups and helped them in launching their prototypes and got valuable learning experience. I'm an active Google Developer Student Clubs (DSC) lead and also CEO/Founder Flutter Islamabad, Pakistan.",
+                        "Experienced Software Engineer with a demonstrated history of working in the information technology and services industry. Skilled in Flutter, Search Engine Optimization (SEO), Web design, Nodejs, Tailwind css, Java, and Networking. Strong engineering professional with a Bachelor's degree focused in Information Technology from Islamic Azad University.",
                         style: GoogleFonts.montserrat(
                           fontSize: height * 0.02,
                           color: Colors.grey[500],
@@ -121,11 +121,11 @@ class AboutDesktop extends StatelessWidget {
                         children: [
                           AboutMeMetaData(
                             data: "Name",
-                            information: "Muhammad Hamza",
+                            information: "Ali Azimoshan",
                           ),
                           AboutMeMetaData(
                             data: "Email",
-                            information: "hamza.6.shakeel@gmail.com",
+                            information: "a.azimoshan@gmail.com",
                           ),
                         ],
                       ),
@@ -139,27 +139,26 @@ class AboutDesktop extends StatelessWidget {
                             child: OutlinedCustomBtn(
                               onPressed: () {
                                 html.window.open(
-                                    'https://drive.google.com/file/d/1GF-wtbu2ob_Uxhw2In2QA8QiYi3XjCj1/view?usp=sharing',
-                                    "pdf");
+                                    'https://jobinja.ir/user/aliazim', "pdf");
                               },
                               btnText: "Resume",
                             ),
                           ),
-                          Container(
-                            width: width * 0.05,
-                            decoration: BoxDecoration(
-                              border: Border(
-                                bottom: BorderSide(
-                                    color: Colors.grey[900], width: 2.0),
-                              ),
-                            ),
-                          ),
-                          for (int i = 0; i < kCommunityLogo.length; i++)
-                            CommunityIconBtn(
-                              icon: kCommunityLogo[i],
-                              link: kCommunityLinks[i],
-                              height: _communityLogoHeight[i],
-                            ),
+                          // Container(
+                          //   width: width * 0.05,
+                          //   decoration: BoxDecoration(
+                          //     border: Border(
+                          //       bottom: BorderSide(
+                          //           color: Colors.grey[900], width: 2.0),
+                          //     ),
+                          //   ),
+                          // ),
+                          // for (int i = 0; i < kCommunityLogo.length; i++)
+                          //   CommunityIconBtn(
+                          //     icon: kCommunityLogo[i],
+                          //     link: kCommunityLinks[i],
+                          //     height: _communityLogoHeight[i],
+                          //   ),
                         ],
                       ),
                     ],

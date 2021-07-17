@@ -17,22 +17,22 @@ class NavBarLogo extends StatelessWidget {
           Text(
             "< ",
             style: TextStyle(
-              fontSize: height ?? 20,
+              fontSize: height ?? 18,
               color: _themeProvider.lightTheme ? Colors.black : Colors.white,
             ),
           ),
           Text(
-            "Hamza",
+            "Aliazimoshan",
             style: TextStyle(
               fontFamily: "Agustina",
-              fontSize: height ?? 20,
+              fontSize: height ?? 18,
               color: _themeProvider.lightTheme ? Colors.black : Colors.white,
             ),
           ),
           Text(
             MediaQuery.of(context).size.width >= 1000 ? " />\t\t" : " />",
             style: TextStyle(
-              fontSize: height ?? 20,
+              fontSize: height ?? 18,
               color: _themeProvider.lightTheme ? Colors.black : Colors.white,
             ),
           )
