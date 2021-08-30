@@ -30,7 +30,7 @@ class AboutTab extends StatelessWidget {
           CustomSectionHeading(text: "\nAbout Me"),
           CustomSectionSubHeading(text: "Get to know me :)"),
           Image.asset(
-            'assets/mob.png',
+            'assets/mob.jpg',
             height: height * 0.3,
           ),
           SizedBox(

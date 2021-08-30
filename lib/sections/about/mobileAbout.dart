@@ -30,10 +30,25 @@ class AboutMobile extends StatelessWidget {
         children: [
           CustomSectionHeading(text: "\nAbout Me"),
           CustomSectionSubHeading(text: "Get to know me :)"),
-          Image.asset(
-            'assets/mob.png',
+          Container(
             height: height * 0.27,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              border: Border.all(
+                color: Colors.blue,
+                width: 2,
+              ),
+              image: DecorationImage(
+                image: AssetImage(
+                  'assets/mob.jpg',
+                ),
+              ),
+            ),
           ),
+          // Image.asset(
+          //   'assets/mob.jpg',
+          //   height: height * 0.27,
+          // ),
           SizedBox(
             height: height * 0.03,
           ),

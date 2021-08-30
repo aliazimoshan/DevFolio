@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 // Colors
-const Color kPrimaryColor = Color(0xffC0392B);
+const Color kPrimaryColor = Colors.blue;
+const Color lightBackground = Color(0xffE0E0E0);
+const Color darkBackground = Color(0xff121212);
 
 // Social Media
 const kSocialIcons = [
@@ -15,7 +17,7 @@ const kSocialIcons = [
 
 const kSocialLinks = [
   "https://www.facebook.com/a.azimoshan",
-  "https://www.instagram.com/ali__azim",
+  "https://www.instagram.com/ali.azimoshan",
   "https://twitter.com/AAzimoshan",
   "https://www.linkedin.com/in/ali-azimoshan-b19694180",
   "https://github.com/aliazimoshan",

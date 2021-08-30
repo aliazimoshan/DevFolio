@@ -1,3 +1,4 @@
+import 'package:day_night_switcher/day_night_switcher.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/rendering.dart';
@@ -115,11 +116,12 @@ class _MainPageState extends State<MainPage> {
     final _themeProv = Provider.of<ThemeProvider>(context);
     return Scaffold(
       extendBodyBehindAppBar: true,
-      backgroundColor: _themeProv.lightTheme ? Colors.white : Colors.black,
+      backgroundColor: _themeProv.lightTheme ? lightBackground : darkBackground,
       appBar: MediaQuery.of(context).size.width < 760
           ? AppBar(
               iconTheme: IconThemeData(
-                  color: _themeProv.lightTheme ? Colors.black : Colors.white),
+                color: _themeProv.lightTheme ? darkBackground : lightBackground,
+              ),
               elevation: 0,
               backgroundColor: Colors.transparent,
               actions: [
@@ -171,8 +173,9 @@ class _MainPageState extends State<MainPage> {
                 child: Text(
                   childText,
                   style: TextStyle(
-                    color:
-                        themeProvider.lightTheme ? Colors.black : Colors.white,
+                    color: themeProvider.lightTheme
+                        ? darkBackground
+                        : lightBackground,
                   ),
                 ),
               ),
@@ -194,8 +197,8 @@ class _MainPageState extends State<MainPage> {
                 title: Text(childText,
                     style: TextStyle(
                       color: themeProvider.lightTheme
-                          ? Colors.black
-                          : Colors.white,
+                          ? darkBackground
+                          : lightBackground,
                     )),
               ),
             ),
@@ -205,7 +208,7 @@ class _MainPageState extends State<MainPage> {
   Widget _appBarTabDesktop(ThemeProvider _themeProv) {
     return AppBar(
       elevation: 0.0,
-      backgroundColor: _themeProv.lightTheme ? Colors.white : Colors.black,
+      backgroundColor: _themeProv.lightTheme ? lightBackground : darkBackground,
       title: MediaQuery.of(context).size.width < 780
           ? EntranceFader(
               duration: Duration(milliseconds: 250),
@@ -246,7 +249,8 @@ class _MainPageState extends State<MainPage> {
               child: Text(
                 "RESUME",
                 style: GoogleFonts.montserrat(
-                  color: _themeProv.lightTheme ? Colors.black : Colors.white,
+                  color:
+                      _themeProv.lightTheme ? darkBackground : lightBackground,
                   fontWeight: FontWeight.w300,
                 ),
               ),
@@ -254,15 +258,23 @@ class _MainPageState extends State<MainPage> {
           ),
         ),
         const SizedBox(width: 15.0),
-        SizedBox(
-          height: 30.0,
-          child: Switch(
-            value: _themeProv.lightTheme,
-            onChanged: (value) {
-              _themeProv.lightTheme = value;
+        Container(
+          // margin: EdgeInsets.fromLTRB(0, 5, 0, 5),
+          child: DayNightSwitcher(
+            isDarkModeEnabled: !_themeProv.lightTheme,
+            onStateChanged: (isDarkModeEnabled) {
+              setState(() {
+                _themeProv.lightTheme = !isDarkModeEnabled;
+              });
             },
-            activeColor: kPrimaryColor,
           ),
+          // Switch(
+          //   value: _themeProv.lightTheme,
+          //   onChanged: (value) {
+          //     _themeProv.lightTheme = value;
+          //   },
+          //   activeColor: kPrimaryColor,
+          // ),
         ),
         const SizedBox(width: 15.0),
       ],
@@ -272,7 +284,7 @@ class _MainPageState extends State<MainPage> {
   Widget _appBarMobile(ThemeProvider theme) {
     return Drawer(
       child: Material(
-        color: theme.lightTheme ? Colors.white : Colors.grey[900],
+        color: theme.lightTheme ? lightBackground : Color(0xff292929),
         child: Padding(
           padding: const EdgeInsets.fromLTRB(0, 25.0, 0, 0),
           child: Column(
@@ -321,7 +333,7 @@ class _MainPageState extends State<MainPage> {
                   child: ListTile(
                     leading: Icon(
                       Icons.book,
-                      color: Colors.red,
+                      color: Colors.blue,
                     ),
                     title: Text(
                       "RESUME",
