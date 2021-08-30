@@ -24,7 +24,7 @@ class AboutTab extends StatelessWidget {
       padding: EdgeInsets.symmetric(
         horizontal: width * 0.05,
       ),
-      color: _themeProvider.lightTheme ? Colors.white : Colors.black,
+      color: _themeProvider.lightTheme ? lightBackground : darkBackground,
       child: Column(
         children: [
           CustomSectionHeading(text: "\nAbout Me"),
